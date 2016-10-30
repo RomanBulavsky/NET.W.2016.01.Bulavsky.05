@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using static Task1.ClassicGCD;
+using static Task1.GeneralSupport;
 
 namespace Task1.Tests
 {
@@ -14,7 +15,7 @@ namespace Task1.Tests
         [TestCase(7, 42,84,168,7)]
         public static void FindGCD_GoodNumbers_CorrectGCD(int GCD, params int[] inputValues)
         {
-            Assert.AreEqual(GCD, FindEuclideanGCD(inputValues));
+            Assert.AreEqual(GCD, FindForManyArgs(FindEuclideanGCD, inputValues));
         }
 
         [TestCase(1, 2, 4, 6, 8, -13)]
@@ -23,7 +24,7 @@ namespace Task1.Tests
         [TestCase(42)]
         public static void FindGCD_BadNumbers_ArgumentException(params int[] inputValues)
         {
-            Assert.That(() => FindEuclideanGCD(inputValues), Throws.TypeOf<ArgumentException>());
+            Assert.That(() => FindForManyArgs(FindEuclideanGCD, inputValues), Throws.TypeOf<ArgumentException>());
             
         }
 
@@ -32,7 +33,7 @@ namespace Task1.Tests
         [TestCase(null)]
         public static void FindGCD_Null_ArgumentException(int[] inputValues)
         {
-            Assert.That(() => FindEuclideanGCD(inputValues), Throws.TypeOf<ArgumentException>());
+            Assert.That(() => FindForManyArgs(FindEuclideanGCD, inputValues), Throws.TypeOf<ArgumentNullException>());
 
         }
 

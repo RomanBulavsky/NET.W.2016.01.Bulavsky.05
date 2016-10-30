@@ -12,7 +12,8 @@ namespace Task1
         /// <summary>
         /// Delegate that takes method for finding GCD.
         /// </summary>
-        public delegate int DelegatHelper(params int[] inputValues);
+        public delegate int MethodForFindingGDCForMultipleArgs(params int[] inputValues);
+        public delegate int MethodForFindingGDC(int a, int b);
 
         /// <summary>
         /// Determines the time spent to the searching GCD. 
@@ -20,7 +21,7 @@ namespace Task1
         /// <param name="numberOfValues">The number of elements to be generated for finding the gcd.</param>
         /// <param name="GCDMethod"> Delegate that takes method for finding GCD.</param>
         /// <returns> Number of Elapsed ticks.</returns>
-        public static long TimeTest(int numberOfValues, DelegatHelper GCDMethod)
+        public static long TimeTest(int numberOfValues, MethodForFindingGDCForMultipleArgs GCDMethod)
         {
             var inputValues = new int[numberOfValues];
             var random = new Random();
@@ -49,6 +50,33 @@ namespace Task1
             
             if (ReferenceEquals(argumentsArray, null) || argumentsArray.Length < 2) return true;
             return argumentsArray.Any(arg => arg <= 0); // Tnx Resharper
+        }
+
+        /// <summary>
+        /// Takes array of parameters and returns the GCD.
+        /// </summary>
+        /// <param name="argumentsArray">The array of numbers to compute.</param>
+        /// <returns> int which contains the GCD of two numbers.</returns>
+        public static int FindForManyArgs(MethodForFindingGDC methodForFindGCD, params int[] argumentsArray)//Bad practise, very similar to the BinaryGCD.FindGCD.
+        {
+            if (methodForFindGCD == null) throw new ArgumentNullException(nameof(methodForFindGCD));
+            if (argumentsArray == null) throw new ArgumentNullException(nameof(argumentsArray));
+
+            if (GeneralSupport.IsBadArray(argumentsArray))
+                throw new ArgumentException();
+
+            if (argumentsArray.Length == 2) return methodForFindGCD(argumentsArray[0], argumentsArray[1]);
+
+            for (int i = 0; i < argumentsArray.Length - 1; i++)
+            {
+                if (argumentsArray[i] == argumentsArray[i + 1])
+                    continue;
+                else
+                    argumentsArray[0] = methodForFindGCD(argumentsArray[0], argumentsArray[i + 1]);
+            }
+
+            return argumentsArray[0];
+
         }
     }
 }

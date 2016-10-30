@@ -36,7 +36,7 @@ namespace Task1
             }
             return secondNumber*cofficient;
         }
-
+        /*
         /// <summary>
         /// Takes array of parameters and returns the GCD.
         /// </summary>
@@ -58,6 +58,6 @@ namespace Task1
             }
 
             return argumentsArray[0];
-        }
+        }*/
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using static Task1.BinaryGCD;
+using static Task1.GeneralSupport;
 
 namespace Task1.Tests
 {
@@ -15,7 +16,7 @@ namespace Task1.Tests
         [TestCase(7, 42, 84, 168, 7)]
         public static void FindEuclideanGCD_GoodNumbers_RightGCD(int GCD, params int[] inputValues)
         {
-            Assert.AreEqual(GCD, FindGCD(inputValues));
+            Assert.AreEqual(GCD, FindForManyArgs(FindGCD,inputValues));
         }
 
         [TestCase(1, 2, 4, 6, 8, -13)]
@@ -24,7 +25,7 @@ namespace Task1.Tests
         [TestCase(42)]
         public static void FindEuclideanGCD_BadNumbers_ArgumentException(params int[] inputValues)
         {
-            Assert.That(() => FindGCD(inputValues), Throws.TypeOf<ArgumentException>());
+            Assert.That(() => FindForManyArgs(FindGCD, inputValues), Throws.TypeOf<ArgumentException>());
 
         }
 
@@ -33,7 +34,7 @@ namespace Task1.Tests
         [TestCase(null)]
         public static void FindEuclideanGCD_Null_ArgumentException(int[] inputValues)
         {
-            Assert.That(() => FindGCD(inputValues), Throws.TypeOf<ArgumentException>());
+            Assert.That(() => FindForManyArgs(FindGCD, inputValues), Throws.TypeOf<ArgumentNullException>());
 
         }
 
@@ -41,7 +42,7 @@ namespace Task1.Tests
         [TestCase(2, 2)]
         public static void Test(int number, int GCD)
         {
-            TestContext.Write(GeneralSupport.TimeTest(number, new GeneralSupport.DelegatHelper(new GeneralSupport.DelegatHelper(FindGCD))));
+            TestContext.Write(GeneralSupport.TimeTest(number, new GeneralSupport.MethodForFindingGDCForMultipleArgs(new GeneralSupport.MethodForFindingGDCForMultipleArgs(FindGCD))));
 
             Assert.AreEqual(GCD, FindGCD(2, 4, 12, 2, 26));
         }*/

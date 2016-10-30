@@ -34,7 +34,7 @@ namespace Task1
 
             return firstNumber;
         }
-
+        /*
         /// <summary>
         /// Takes array of parameters and returns the GCD.
         /// </summary>
@@ -57,7 +57,7 @@ namespace Task1
 
             return argumentsArray[0];
 
-        }
+        }*/
  
     }
 }

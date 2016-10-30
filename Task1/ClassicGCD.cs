@@ -40,7 +40,7 @@ namespace Task1
         /// </summary>
         /// <param name="argumentsArray">The array of numbers to compute.</param>
         /// <returns> int which contains the GCD of two numbers.</returns>
-        public static int FindEuclideanGCD(params int[] argumentsArray)
+        public static int FindEuclideanGCD(params int[] argumentsArray)//Bad practise, very similar to the BinaryGCD.FindGCD.
         {
             if (GeneralSupport.IsBadArray(argumentsArray))
                 throw new ArgumentException();

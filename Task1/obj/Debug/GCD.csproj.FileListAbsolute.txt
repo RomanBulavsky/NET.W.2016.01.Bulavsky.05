@@ -1,0 +1,5 @@
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD\bin\Debug\GCD.dll
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD\bin\Debug\GCD.pdb
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD\obj\Debug\GCD.csprojResolveAssemblyReference.cache
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD\obj\Debug\GCD.dll
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD\obj\Debug\GCD.pdb

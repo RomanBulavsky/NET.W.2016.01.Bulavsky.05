@@ -1,0 +1,9 @@
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD.Tests\bin\Debug\GCD.Tests.dll
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD.Tests\bin\Debug\GCD.Tests.pdb
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD.Tests\bin\Debug\GCD.dll
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD.Tests\bin\Debug\nunit.framework.dll
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD.Tests\bin\Debug\GCD.pdb
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD.Tests\bin\Debug\nunit.framework.xml
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD.Tests\obj\Debug\GCD.Tests.csprojResolveAssemblyReference.cache
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD.Tests\obj\Debug\GCD.Tests.dll
+C:\Users\User\documents\visual studio 2015\Projects\NET.W.2016.01.Bulavsky.05\GCD.Tests\obj\Debug\GCD.Tests.pdb

@@ -1,0 +1,9 @@
+D:\EPAM\NET.W.2016.01.Bulavsky.05\Task1.Tests\bin\Debug\GCD.Tests.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.05\Task1.Tests\bin\Debug\GCD.Tests.pdb
+D:\EPAM\NET.W.2016.01.Bulavsky.05\Task1.Tests\bin\Debug\nunit.framework.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.05\Task1.Tests\bin\Debug\nunit.framework.xml
+D:\EPAM\NET.W.2016.01.Bulavsky.05\Task1.Tests\obj\Debug\Task1.Tests.csprojResolveAssemblyReference.cache
+D:\EPAM\NET.W.2016.01.Bulavsky.05\Task1.Tests\obj\Debug\GCD.Tests.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.05\Task1.Tests\obj\Debug\GCD.Tests.pdb
+D:\EPAM\NET.W.2016.01.Bulavsky.05\Task1.Tests\bin\Debug\Task1.dll
+D:\EPAM\NET.W.2016.01.Bulavsky.05\Task1.Tests\bin\Debug\Task1.pdb

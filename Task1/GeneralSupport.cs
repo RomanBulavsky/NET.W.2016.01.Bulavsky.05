@@ -10,51 +10,45 @@ namespace Task1
     public class GeneralSupport
     {
         /// <summary>
-        /// Delegate that take method for finding GCD
+        /// Delegate that takes method for finding GCD.
         /// </summary>
-        /// <param name="inputValues"> params for choosed method of finding GCD</param>
-        /// <returns></returns>
         public delegate int DelegatHelper(params int[] inputValues);
 
         /// <summary>
-        /// Method for testing time loosing for find GCD
+        /// Determines the time spent to the searching GCD. 
         /// </summary>
-        /// <param name="numberOfValues"> number of elements for GCD</param>
-        /// <param name="GCDMethod"> Delegate that take method for finding GCD</param>
-        /// <returns> Return lost time for operations</returns>
+        /// <param name="numberOfValues">The number of elements to be generated for finding the gcd.</param>
+        /// <param name="GCDMethod"> Delegate that takes method for finding GCD.</param>
+        /// <returns> Number of Elapsed ticks.</returns>
         public static long TimeTest(int numberOfValues, DelegatHelper GCDMethod)
         {
             var inputValues = new int[numberOfValues];
-            var random = new Random(75);
+            var random = new Random();
             for (int i = 1; i < numberOfValues + 1; i++)
             {
-                inputValues[i - 1] = 6 * Math.Abs(random.Next(120));
+                inputValues[i - 1] = sizeof(byte) - 2 * Math.Abs(random.Next());
             }
             inputValues[numberOfValues - 1] = 2;
 
             Stopwatch s = new Stopwatch();
             s.Reset();
             s.Start();
-            //GCDBin(23,46).Dump();
+            
             GCDMethod(inputValues);
             s.Stop();
             return s.ElapsedTicks;//.Dump(numberOfValues.ToString() + " " + nod);
 
         }
         /// <summary>
-        /// 
+        /// Checks the input parameters to meet the conditions of the method caller.
         /// </summary>
-        /// <param name="argumentsArray"></param>
-        /// <returns></returns>
+        /// <param name="argumentsArray">Input parameters for validation. </param>
+        /// <returns> Bool value. </returns>
         public static bool IsBadArray(int[] argumentsArray)
         {
             
             if (ReferenceEquals(argumentsArray, null) || argumentsArray.Length < 2) return true;
-            foreach (var arg in argumentsArray)
-            {
-                if (arg <= 0) return true;
-            }
-            return false;
+            return argumentsArray.Any(arg => arg <= 0); // Tnx Resharper
         }
     }
 }
